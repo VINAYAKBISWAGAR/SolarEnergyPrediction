@@ -1,3 +1,40 @@
-<h1>
-    Hello world
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>SolarEnergyPrediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>SolarEnergyPrediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="DAILY_YIELD" placeholder="DAILY_YIELD" required="required" /><br>
+    	<input type="text" name="TOTAL_YIELD" placeholder="TOTAL_YIELD" required="required" /><br>
+        <input type="text" name="AMBIENT_TEMPERATURE" placeholder="AMBIENT_TEMPERATURE" required="required" /><br>
+        <input type="text" name="MODULE_TEMPERATURE" placeholder="MODULE_TEMPERATURE" required="required" /><br>
+        <input type="text" name="IRRADIATION" placeholder="IRRADIATION" required="required" /><br>
+        <input type="text" name="DC_POWER" placeholder="DC_POWER" required="required" /><br>
+             
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
