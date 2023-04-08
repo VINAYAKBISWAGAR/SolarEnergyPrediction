@@ -18,12 +18,14 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="DAILY_YIELD" placeholder="DAILY_YIELD" required="required" /><br>
-    	<input type="text" name="TOTAL_YIELD" placeholder="TOTAL_YIELD" required="required" /><br>
-        <input type="text" name="AMBIENT_TEMPERATURE" placeholder="AMBIENT_TEMPERATURE" required="required" /><br>
+      <input type="text" name="DAY" placeholder="DAY" required="required" /><br>
+    	<input type="text" name="MONTH" placeholder="MONTH" required="required" /><br>
+      <input type="text" name="WEEK" placeholder="WEEK" required="required" /><br>
+      <input type="text" name="MINUTES" placeholder="MINUTES" required="required" /><br> 
+      <input type="text" name="AMBIENT_TEMPERATURE" placeholder="AMBIENT_TEMPERATURE" required="required" /><br>
         <input type="text" name="MODULE_TEMPERATURE" placeholder="MODULE_TEMPERATURE" required="required" /><br>
         <input type="text" name="IRRADIATION" placeholder="IRRADIATION" required="required" /><br>
-        <input type="text" name="DC_POWER" placeholder="DC_POWER" required="required" /><br>
+
              
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
